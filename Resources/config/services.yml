@@ -1,0 +1,7 @@
+parameters:
+#    zf1_wrapper.example.class: MainlyCode\Zf1WrapperBundle\Example
+
+services:
+#    zf1_wrapper.example:
+#        class: %zf1_wrapper.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

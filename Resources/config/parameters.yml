@@ -1,0 +1,2 @@
+parameters:
+    zf1wrapper_bootstrap_path: ../web/index.php # your ZF1 bootstrap file relative to kernel.root_dir
