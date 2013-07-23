@@ -1,7 +1,7 @@
 {
     "name": "mainlycode/zf1wrapperbundle",
     "description": "Symfony 2 bundle for wrapping a Zend Framework 1 legacy application",
-    "license": "MIT", 
+    "license": "MIT",
     "type": "symfony-bundle",
     "authors": [
         {
@@ -12,6 +12,9 @@
     "minimum-stability": "alpha",
     "require": {
         "php": ">=5.3.3"
+    },
+    "require-dev": {
+        "zendframework/zendframework1": "1.12.*@dev"
     },
     "autoload": {
         "psr-0": { "MainlyCode\\Zf1WrapperBundle": "" }
