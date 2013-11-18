@@ -28,6 +28,23 @@ class DefaultController extends Controller
         include $rootDir . '/' . $bootstrap;
         $content = ob_get_clean();
 
-        return new Response($content);
+        // capture http response code (requires PHP >= 5.4.0)
+        if (function_exists('http_response_code')) {
+            $code = http_response_code();
+        } else {
+            $code = 200;
+        }
+
+        // capture headers
+        $headersSent = headers_list();
+        $headers     = array();
+
+        array_walk($headersSent, function($value, $key) use(&$headers) {
+            $parts = explode(': ', $value);
+            $headers[$parts[0]] = $parts[1];
+        });
+        header_remove();
+
+        return new Response($content, $code, $headers);
     }
 }
