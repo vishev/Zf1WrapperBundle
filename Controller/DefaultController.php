@@ -29,7 +29,7 @@ class DefaultController extends Controller
         $content = ob_get_clean();
 
         // capture http response code (requires PHP >= 5.4.0)
-        if (function_exists('http_response_code')) {
+        if (function_exists('http_response_code') && http_response_code() > 0) {
             $code = http_response_code();
         } else {
             $code = 200;
