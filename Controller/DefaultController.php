@@ -41,7 +41,7 @@ class DefaultController extends Controller
 
         array_walk($headersSent, function($value, $key) use(&$headers) {
             $parts = explode(': ', $value);
-            $headers[$parts[0]] = $parts[1];
+            $headers[$parts[0]][] = $parts[1];
         });
         header_remove();
 
