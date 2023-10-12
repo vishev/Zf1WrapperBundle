@@ -17,8 +17,8 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $rootNode = $treeBuilder->root('zf1_wrapper');
         $treeBuilder = new TreeBuilder();
+        $rootNode = $treeBuilder->root('zf1_wrapper');
 
         // Here you should define the parameters that are allowed to
         // configure your bundle. See the documentation linked above for
