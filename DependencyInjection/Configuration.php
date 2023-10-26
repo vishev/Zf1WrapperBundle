@@ -17,7 +17,7 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        if (!method_exists(TreeBuilder::class, 'getRootNode')) {
+        if (method_exists(TreeBuilder::class, 'getRootNode')) {
             // Symfony >=5
             $treeBuilder = new TreeBuilder('zf1_wrapper');
             $rootNode = $treeBuilder->getRootNode();
