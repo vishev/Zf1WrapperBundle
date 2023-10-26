@@ -13,7 +13,7 @@ It can be used to refactor parts of your legacy code to Symfony 2.
 Add the following to your composer.json:
 ```
     "require": {
-        "mainlycode/zf1wrapperbundle":  "dev-master"
+        "skrepr/zf1wrapperbundle":  "dev-master"
     }
 ```
 
