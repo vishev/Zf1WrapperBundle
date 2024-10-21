@@ -2,11 +2,11 @@
 
 namespace MainlyCode\Zf1WrapperBundle\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Zend_Registry;
 
-class DefaultController extends Controller
+class DefaultController extends AbstractController
 {
     /**
      * indexAction

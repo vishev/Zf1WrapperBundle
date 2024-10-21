@@ -1,5 +1,5 @@
 {
-    "name": "skrepr/zf1wrapperbundle",
+    "name": "vishev/zf1wrapperbundle",
     "description": "Symfony 2 bundle for wrapping a Zend Framework 1 legacy application",
     "license": "MIT",
     "type": "symfony-bundle",
@@ -9,12 +9,12 @@
             "email": "othillo@othillo.nl"
         }
     ],
-    "minimum-stability": "alpha",
+    "minimum-stability": "beta",
     "require": {
         "php": ">=5.3.3"
     },
     "require-dev": {
-        "zendframework/zendframework1": "1.12.*@dev"
+        "shardj/zf1-future": "^1.24"
     },
     "autoload": {
         "psr-0": { "MainlyCode\\Zf1WrapperBundle": "" }
