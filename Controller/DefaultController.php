@@ -4,24 +4,32 @@ namespace MainlyCode\Zf1WrapperBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpKernel\KernelInterface;
 use Zend_Registry;
 
 class DefaultController extends AbstractController
 {
+    private KernelInterface $kernel;
+
+    public function __construct(KernelInterface $kernel)
+    {
+        $this->kernel = $kernel;
+    }
+
     /**
-     * indexAction
+     * index
      *
      * @param string $url
      *
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function indexAction($url)
+    public function index($url): Response
     {
         // pass Dependency Injection Container
         Zend_Registry::set('dic', $this->container);
 
-        $rootDir   = $this->get('kernel')->getRootDir();
-        $bootstrap = $this->container->getParameter('zf1wrapper_bootstrap_path');
+        $rootDir   = $this->kernel->getProjectDir();
+        $bootstrap = $this->getParameter('zf1wrapper_bootstrap_path');
 
         // capture content from legacy application
         ob_start();

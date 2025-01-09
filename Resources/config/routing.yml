@@ -1,5 +1,7 @@
 zf1_wrapper_catchall:
     path: /{url}
-    defaults: { _controller: Zf1WrapperBundle:Default:index, url: "index" }
+    defaults:
+        _controller: 'MainlyCode\Zf1WrapperBundle\Controller\DefaultController::index'
+        url: "index"
     requirements:
         url: ".+"
